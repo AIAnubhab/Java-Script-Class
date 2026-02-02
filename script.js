@@ -52,3 +52,10 @@ console.log("Hidden paragraph innerText:", hiddenParagraph.innerText);
 
 paragraphsNodeList[1].innerHTML = "<div><b>Hello</b> World</div>";
 console.log("Paragraph after innerHTML update:", paragraphsNodeList[1]);
+const submitButton = document.querySelector("#submitBtn");
+
+const toggleButton = document.querySelector("#toggleBtn");
+
+toggleButton.addEventListener("click", function () {
+    submitButton.classList.toggle("btn");
+});
