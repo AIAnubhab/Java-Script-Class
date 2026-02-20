@@ -59,3 +59,68 @@ const toggleButton = document.querySelector("#toggleBtn");
 toggleButton.addEventListener("click", function () {
     submitButton.classList.toggle("btn");
 });
+
+// function orderFood(){
+//     return new Promise((resolve, reject) => {
+//         setTimeout(() => {
+//             console.log("Food Ordered");
+//             resolve();
+//         }, 2000);
+//     });
+// }
+
+// function deliverFood(){
+//     return new Promise((resolve, reject) => {
+//         setTimeout(() => {
+//             console.log("Food Delivered");
+//             resolve("Food deliverd successfully");
+//         }, 3000);
+//     }); 
+// }
+
+// orderFood().then((data) => {
+//     console.log(data)
+//     return deliverFood();
+// }).then((data) => {
+//     console.log(data);
+// }).catch((error) => {
+//     console.log(error);
+// }
+// )
+
+// async function order(){   
+//     const data = await orderFood();
+//         await orderFood();
+//         await deliverFood();
+//         console.log("All tasks completed");
+// }
+
+// console.log("first line");
+// try{
+//     console.log(a)
+// }catch(error){
+//     console.log("Error caught:", error.message);
+// }
+
+// console.log("first line");
+// try{
+//     let age = 25;
+//     if(age < 18){
+//         throw new Error("Age must be at least 18");
+//     }
+// }catch(error){
+//     console.log("Error caught:", error.message);
+// }finally{
+//     console.log("This will always execute");
+// }
+// console.log("last line");
+
+async function getdata() {
+    try {
+    const response = await fetch('https://jsonplaceholder.typicode.com/posts/1');
+    const data = await response.json();
+    console.log(data);
+}catch(error){
+    console.log("Error fetching data:", error.message);
+}
+}
